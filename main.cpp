@@ -6,7 +6,7 @@
 #include <vector>
 
 // change the size here
-#define NUM_VERTICES 4
+#define NUM_VERTICES 3
 
 //Make the code easier to type with "using namespace"
 using namespace sf;
