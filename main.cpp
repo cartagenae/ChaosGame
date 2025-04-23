@@ -6,7 +6,7 @@
 #include <vector>
 
 // change the size here
-#define NUM_VERTICES 3
+#define NUM_VERTICES 5
 
 //Make the code easier to type with "using namespace"
 using namespace sf;
@@ -15,8 +15,8 @@ using namespace std;
 // Generate random number between 1 and 3 inclusive
 int GenerateRandomNumber()
 {
-	int randomNumber = (rand() % NUM_VERTICES) + 1;
-	return randomNumber - 1;
+	int randomNumber = rand() % NUM_VERTICES;
+	return randomNumber;
 }
 
 // Calulate the midpoint between the user point and the designated random point
@@ -149,22 +149,21 @@ int main()
 				else if(vertices.size() == 5)
 				{
 					// previousRandomVertexPoint = randomVertexPoint;
-					int sum = (previousRandomVertexPoint + 2) % 5;
-					int difference = (((previousRandomVertexPoint - 2) % 5) + 5) % 5;
+					int sum = (previousRandomVertexPoint + 1) % 5;
+					int difference = (((previousRandomVertexPoint - 1) % 5) + 5) % 5;
 					while(randomVertexPoint == sum || randomVertexPoint == difference)
 					{
 						randomVertexPoint = GenerateRandomNumber();
-
-						cout << endl;
-						cout << "sum: " << sum << endl;
-						cout << "difference: " << difference << endl;
-						cout << "randomVertexPoint: " << randomVertexPoint << endl;
-						cout << endl;
+						// cout << endl;
+						// cout << "sum: " << sum << endl;
+						// cout << "difference: " << difference << endl;
+						// cout << "randomVertexPoint: " << randomVertexPoint << endl;
+						// cout << endl;
 					}
-					cout << "done iterating randomVertexPoint" << endl;
-					cout << "sum: " << sum << endl;
-					cout << "difference: " << difference << endl;
-					cout << "randomVertexPoint: " << randomVertexPoint << endl;
+					// cout << "done iterating randomVertexPoint" << endl;
+					// cout << "sum: " << sum << endl;
+					// cout << "difference: " << difference << endl;
+					// cout << "randomVertexPoint: " << randomVertexPoint << endl;
 					// cout << endl;
 					// cout << "sum: " << sum << endl;
 					// cout << "difference: " << difference << endl;
